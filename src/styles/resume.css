@@ -173,19 +173,6 @@ body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  
-  .section {
-    page-break-inside: avoid;
-  }
-  
-  .job {
-    page-break-inside: avoid;
-  }
-
-  /* Ensure experience section breaks to page 2 */
-  .experience-section {
-    page-break-after: page;
-  }
 }
 
 @page {
