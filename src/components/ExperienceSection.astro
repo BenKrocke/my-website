@@ -6,24 +6,22 @@ const jobs = [
     company: "Energy Bay - Diamond Energy",
     title: "Lead Software Developer", 
     period: "Jul. 2024 - Current",
-    location: "Prahran, AUS",
+    location: "Burnley, AUS",
     descriptions: [
       "Australian energy retailer offering sustainable, renewable electricity to homes and businesses",
-      "Led the end-to-end development of two customer portals, handling design, deployment, and implementation",
+      "Led the end-to-end development of two customer portals, handling implementation, design, and deployment",
       "Architected and deployed cloud infrastructure using Azure virtual networks, IPSec tunnels, app services, and continuous deployment pipelines",
       "Established multiple staging and production environments with automated CI/CD workflows",
-      "Mentored a junior developer while maintaining high code quality and delivery standards",
-      "Enhanced security across applications by implementing Auth0 user authentication systems",
-      "Solved complex technical challenges including prototyping dynamic rates look-up functionality"
+      "Enhanced security across applications by implementing Auth0 & FusionAuth user authentication systems",
     ]
   },
   {
-    company: "iO",
+    company: "iO Digital",
     title: "Software Developer",
     period: "Aug. 2021 - Dec. 2022", 
     location: "'s-Hertogenbosch, NL",
     descriptions: [
-      "End-to-end agency and team of experts specializing in communication and digital transformation",
+      "End-to-end digital agency and team of experts specializing in communication and digital transformation",
       "Built and maintained .NET, React, and Sitecore components for the Dutch energy regulator Enexis website",
       "Utilized Sitecore PowerShell Extensions to automate processes and generate custom reports, reducing manual editor operations"
     ]
@@ -50,41 +48,31 @@ const jobs = [
       "Created SAP integration with a Laravel website enabling customers to track service tickets, reducing help desk calls and inquiries"
     ]
   },
-  {
-    company: "Logius",
-    title: "Internship",
-    period: "Jan. 2020 - Jun. 2020",
-    location: "The Hague, NL",
-    descriptions: [
-      "Digital government service of the Netherlands Ministry of the Interior and Kingdom Relations",
-      "Improved the publication process for technical documents by integrating a standard HTML format that converts input to Dutch W3C specification format using Respect (JS)"
-    ]
-  },
-  {
-    company: "Amacom", 
-    title: "Part-time Software Developer",
-    period: "Jun. 2018 - Jan. 2019",
-    location: "'s-Hertogenbosch, NL",
-    descriptions: [
-      "Leading supplier of consumer electronics and small domestic appliances in the Benelux region",
-      "Contributed to the Amacom 'Quecom' order and information system by modernizing modules from Zend 1 to Symfony framework"
-    ]
-  },
-  {
-    company: "SBS",
-    title: "Graphic Designer", 
-    period: "Aug. 2014 - May 2018",
-    location: "Amsterdam, NL",
-    descriptions: [
-      "Dutch free-to-cable commercial television channel",
-      "Developed, designed, and executed daily post-production activities for Dutch news broadcasts 'Hart van Nederland' and 'Shownieuws', collaborating with editors and directors under strict deadlines",
-      "Created infographics, animations, and graphics for broadcast content"
-    ]
-  }
+//   {
+//     company: "Amacom", 
+//     title: "Part-time Software Developer",
+//     period: "Jun. 2018 - Jan. 2019",
+//     location: "'s-Hertogenbosch, NL",
+//     descriptions: [
+//       "Leading supplier of consumer electronics and small domestic appliances in the Benelux region",
+//       "Contributed to the Amacom 'Quecom' order and information system by modernizing modules from Zend 1 to Symfony framework"
+//     ]
+//   },
+//   {
+//     company: "SBS",
+//     title: "Graphic Designer", 
+//     period: "Aug. 2014 - May 2018",
+//     location: "Amsterdam, NL",
+//     descriptions: [
+//       "Dutch free-to-cable commercial television channel",
+//       "Developed, designed, and executed daily post-production activities for Dutch news broadcasts 'Hart van Nederland' and 'Shownieuws', collaborating with editors and directors under strict deadlines",
+//       "Created infographics, animations, and graphics for broadcast content"
+//     ]
+//   }
 ];
 ---
 
-<div class="section">
+<div class="section experience-section">
   <div class="section-title">Experience</div>
   {jobs.map((job) => (
     <JobEntry

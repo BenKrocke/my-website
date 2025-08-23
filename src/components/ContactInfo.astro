@@ -4,16 +4,18 @@ export interface Props {
   email: string;
   phone: string;
   location: string;
+  linkedin?: string;
+  github?: string;
 }
 
-const { name, email, phone, location } = Astro.props;
+const { name, email, phone, location, linkedin, github } = Astro.props;
 ---
 
 <div class="header">
   <div class="name">{name}</div>
   <div class="contact-info">
-    <span>{email}</span>
-    <span>{phone}</span>
-    <span>{location}</span>
+      <span>{email}</span>
+      {linkedin && <span>linkedin.com/in/ben-krocke</span>}
+      {github && <span>github.com/benkrocke</span>}
   </div>
 </div>
