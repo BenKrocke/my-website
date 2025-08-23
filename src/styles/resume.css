@@ -1,3 +1,27 @@
+:root {
+  /* Spacing scale */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 0.75rem;    /* 12px */
+  --space-lg: 1rem;       /* 16px */
+  --space-xl: 1.25rem;    /* 20px */
+  --space-2xl: 1.5rem;    /* 24px */
+  --space-3xl: 2rem;      /* 32px */
+  --space-4xl: 2.5rem;    /* 40px */
+  
+  /* Typography scale */
+  --font-xs: 0.594rem;    /* 9.5px */
+  --font-sm: 0.656rem;    /* 10.5px */
+  --font-base: 0.875rem;  /* 14px */
+  --font-lg: 0.688rem;    /* 11px */
+  --font-xl: 1.625rem;    /* 26px */
+  --font-2xl: 1.75rem;    /* 28px */
+  
+  /* Colors */
+  --color-text: rgb(22, 22, 22);
+  --color-border: rgb(22, 22, 22);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,32 +29,33 @@
 }
 
 body {
-  color: rgb(22, 22, 22);
+  color: var(--color-text);
   font-family: 'Arial', sans-serif;
   line-height: 1.5;
   max-width: 210mm;
   margin: 0 auto;
   padding: 18mm;
-  font-size: 10.5pt;
+  font-size: var(--font-base);
 }
 
 .header {
   text-align: left;
-  margin-bottom: 30px;
+  margin-bottom: var(--space-3xl);
 }
 
 .name {
   text-align: center;
-  font-size: 28pt;
+  font-size: var(--font-xl);
   font-weight: bold;
+  margin-bottom: var(--space-sm);
 }
 
 .contact-info {
-  font-size: 9.5pt;
+  font-size: var(--font-xs);
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 2rem;
+  gap: var(--space-3xl);
   flex-wrap: wrap;
 }
 
@@ -44,16 +69,16 @@ body {
 }
 
 .section {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-xl);
 }
 
 .section-title {
   color: var(--secondary);
-  font-size: 14pt;
+  font-size: var(--font-base);
   font-weight: bold;
-  border-bottom: 2px solid rgb(22, 22, 22);
-  padding-bottom: 4px;
-  margin-bottom: 12px;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
@@ -64,12 +89,12 @@ body {
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: 40px;
+  width: var(--space-4xl);
   height: 2px;
 }
 
 .job, .education-item, .project-item {
-  margin-bottom: 16px;
+  margin-bottom: var(--space-lg);
   page-break-inside: avoid;
 }
 
@@ -77,50 +102,50 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 6px;
+  margin-bottom: var(--space-sm);
   flex-wrap: wrap;
 }
 
 .job-title {
   font-weight: bold;
-  font-size: 11pt;
+  font-size: var(--font-lg);
 }
 
 .company {
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: var(--space-xs);
 }
 
 .date-location {
   font-style: italic;
-  font-size: 9.5pt;
+  font-size: var(--font-xs);
   text-align: right;
   white-space: nowrap;
 }
 
 .description {
-  margin-left: 12px;
+  margin-left: var(--space-md);
 }
 
 .description li {
-  margin-bottom: 3px;
+  margin-bottom: var(--space-xs);
   list-style-type: disc;
-  margin-left: 18px;
+  margin-left: var(--space-2xl);
 }
 
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: var(--space-md);
 }
 
 .skill-category {
-  margin-bottom: 8px;
+  margin-bottom: var(--space-sm);
 }
 
 .skill-title {
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: var(--space-xs);
 }
 
 .skill-list {
@@ -130,23 +155,23 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: var(--space-md);
 }
 
 .project-name {
   font-weight: bold;
-  margin-bottom: 2px;
+  margin-bottom: var(--space-xs);
 }
 
 .project-description {
-  font-size: 9.5pt;
+  font-size: var(--font-xs);
 }
 
 .education-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: var(--space-xs);
 }
 
 .degree {
@@ -154,7 +179,7 @@ body {
 }
 
 .institution {
-  font-size: 9.5pt;
+  font-size: var(--font-xs);
 }
 
 /* Force page break after Experience section for 2-page layout */
@@ -172,6 +197,15 @@ body {
   .header {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .section {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .job, .education-item, .project-item {
+    margin-bottom: var(--space-md);
   }
 }
 
