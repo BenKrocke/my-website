@@ -6,16 +6,76 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Ben Krocké - Software Engineer Resume" />
+    <meta name="description" content="Ben Krocké - Lead Software Developer specializing in React, TypeScript, .NET, and cloud infrastructure. Experienced in full-stack development, Azure, AWS, and team leadership." />
+    <meta name="keywords" content="Ben Krocké, Software Engineer, Lead Developer, React, TypeScript, .NET, Azure, AWS, Full Stack Developer, Frontend, Backend, Cloud Infrastructure" />
+    <meta name="author" content="Ben Krocké" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content="Ben Krocké - Lead Software Developer" />
+    <meta property="og:description" content="Lead Software Developer specializing in React, TypeScript, .NET, and cloud infrastructure. Available for new opportunities." />
+    <meta property="og:site_name" content="Ben Krocké Resume" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content="Ben Krocké - Lead Software Developer" />
+    <meta property="twitter:description" content="Lead Software Developer specializing in React, TypeScript, .NET, and cloud infrastructure. Available for new opportunities." />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+    
+    <!-- Structured Data for Better SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ben Krocké",
+      "jobTitle": "Lead Software Developer",
+      "email": "benkrocke@gmail.com",
+      "telephone": "+61 480 445 347",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cremorne",
+        "addressRegion": "VIC",
+        "addressCountry": "AU"
+      },
+      "url": "https://www.benkrocke.com.au",
+      "sameAs": [],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Energy Bay - Diamond Energy"
+      },
+      "knowsAbout": [
+        "React",
+        "TypeScript", 
+        "JavaScript",
+        ".NET",
+        "ASP.NET",
+        "Node.js",
+        "Azure",
+        "AWS",
+        "Cloud Infrastructure",
+        "Full Stack Development",
+        "Software Engineering",
+        "Team Leadership"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Avans Hogeschool"
+      }
+    }
+    </script>
   </head>
   <body>
     <main>

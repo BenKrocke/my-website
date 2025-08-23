@@ -5,10 +5,15 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:pdf": "npm run build && node scripts/generate-pdf.js",
+    "pdf": "node scripts/generate-pdf.js",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "astro": "^5.13.3"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.17.0"
   }
 }
