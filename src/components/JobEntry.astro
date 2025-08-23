@@ -1,0 +1,29 @@
+---
+export interface Props {
+  company: string;
+  title: string;
+  period: string;
+  location: string;
+  descriptions: string[];
+}
+
+const { company, title, period, location, descriptions } = Astro.props;
+---
+
+<div class="job">
+  <div class="job-header">
+    <div>
+      <div class="company">{company}</div>
+      <div class="job-title">{title}</div>
+    </div>
+    <div class="date-location">
+      {period}<br/>
+      {location}
+    </div>
+  </div>
+  <div class="description">
+    <ul>
+      {descriptions.map((desc) => <li>{desc}</li>)}
+    </ul>
+  </div>
+</div>

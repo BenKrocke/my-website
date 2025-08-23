@@ -1,0 +1,29 @@
+---
+const education = [
+  {
+    degree: "Bachelor of ICT",
+    institution: "Avans Hogeschool, 's-Hertogenbosch, NL",
+    date: "Jul. 2020"
+  },
+  {
+    degree: "MBO Graphic Design", 
+    institution: "Koning Willem 1 College, 's-Hertogenbosch, NL",
+    date: "Jul. 2015"
+  }
+];
+---
+
+<div class="section">
+  <div class="section-title">Education</div>
+  {education.map((edu) => (
+    <div class="education-item">
+      <div class="education-header">
+        <div>
+          <div class="degree">{edu.degree}</div>
+          <div class="institution">{edu.institution}</div>
+        </div>
+        <div class="date-location">{edu.date}</div>
+      </div>
+    </div>
+  ))}
+</div>

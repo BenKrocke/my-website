@@ -1,0 +1,95 @@
+---
+import JobEntry from './JobEntry.astro';
+
+const jobs = [
+  {
+    company: "Diamond Energy",
+    title: "Software Engineer", 
+    period: "Jul. 2024 - Current",
+    location: "Prahran, AUS",
+    descriptions: [
+      "An Australian energy retailer offering sustainable, renewable electricity to homes and businesses",
+      "Responsible for the architecture, design, and development of the Gem Dashboard's front-end",
+      "Enhanced Gem security by implementing an Auth0 user system",
+      "Solving a wide range of technical challenges across the business, i.e. prototype a dynamic rates look-up page"
+    ]
+  },
+  {
+    company: "iO",
+    title: "Software Developer",
+    period: "Aug. 2021 - Dec. 2022", 
+    location: "'s-Hertogenbosch, NL",
+    descriptions: [
+      "An end-to-end agency and team of experts in communication and digital transformation",
+      "Built and maintained .NET, React and Sitecore components for the website of Dutch energy regulator Enexis",
+      "Utilised Sitecore Powershell Extension to automate processes and generate custom reports, decreasing the amount of manual steps necessary for editor operations"
+    ]
+  },
+  {
+    company: "Fullcircle / Adabt",
+    title: "Software Engineer",
+    period: "May 2019 - Jul. 2021",
+    location: "Eindhoven, NL", 
+    descriptions: [
+      "A software startup that later changed their core business model to B2B integrations for transport and logistics",
+      "Implemented data integrations between transport companies and their API protocols, utilising Typescript and Google Cloud Functions, improving company scalability by greatly decreasing integration costs",
+      "Responsible for developing a Laravel/Vue website that can connect to a user's \"HappyBot\" product, allowing those on the autism spectrum to more easily share and log their emotions"
+    ]
+  },
+  {
+    company: "Dotcombusiness",
+    title: "Freelance Software Engineer",
+    period: "Dec. 2016 - Dec. 2022",
+    location: "Oss, NL",
+    descriptions: [
+      "IT automation for small- and medium-sized enterprises",
+      "Implemented a .NET service ticket dashboard used to monitor incoming service calls and track deadlines, improving service desk employee efficiency", 
+      "Created a SAP integration with a Laravel website that enables customers to track their service tickets, decreasing the amount of help desk calls and inquiries"
+    ]
+  },
+  {
+    company: "Logius",
+    title: "Internship",
+    period: "Jan. 2020 - Jun. 2020",
+    location: "The Hague, NL",
+    descriptions: [
+      "The digital government service of the Netherlands Ministry of the Interior and Kingdom Relations",
+      "Implemented an improved publication process of technical documents by integrating a standard HTML format that through Respect (JS) converts the input to the Dutch W3C specification format"
+    ]
+  },
+  {
+    company: "Amacom", 
+    title: "Part-time Software Developer",
+    period: "Jun. 2018 - Jan. 2019",
+    location: "'s-Hertogenbosch, NL",
+    descriptions: [
+      "The biggest supplier of consumer electronics and small domestic appliances in the Benelux region",
+      "Contributed to the Amacom 'Quecom' order and information system by updating modules written in Zend 1 to a modern Symphony implementation"
+    ]
+  },
+  {
+    company: "SBS",
+    title: "Graphic Designer", 
+    period: "Aug. 2014 - May 2018",
+    location: "Amsterdam, NL",
+    descriptions: [
+      "A Dutch free-to-cable commercial TV channel",
+      "Develop, design, and execute the daily post-production activities of Dutch news broadcast 'Hart van Nederland' and 'Shownieuws', working interdisciplinary with editors and directors under strict deadlines",
+      "Create infographics, animations, and graphics"
+    ]
+  }
+];
+---
+
+<div class="section">
+  <div class="section-title">Experience</div>
+  {jobs.map((job) => (
+    <JobEntry
+      company={job.company}
+      title={job.title}
+      period={job.period}
+      location={job.location}
+      descriptions={job.descriptions}
+    />
+  ))}
+</div>

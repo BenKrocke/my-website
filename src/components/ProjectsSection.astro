@@ -1,0 +1,32 @@
+---
+const projects = [
+  {
+    name: "React TD",
+    description: "A Tower Defence game written in React"
+  },
+  {
+    name: "C web server", 
+    description: "A HTTP web server utilising UNIX sockets, written in C"
+  },
+  {
+    name: "CHIP-8 Emulator",
+    description: "A CHIP-8 CPU emulator written in Rust utilising a TDD approach"
+  },
+  {
+    name: "Prism",
+    description: "A cross-platform 3D tower defence game written in C++, SDL and OpenGL"
+  }
+];
+---
+
+<div class="section">
+  <div class="section-title">Projects</div>
+  <div class="projects-grid">
+    {projects.map((project) => (
+      <div class="project-item">
+        <div class="project-name">{project.name}</div>
+        <div class="project-description">{project.description}</div>
+      </div>
+    ))}
+  </div>
+</div>

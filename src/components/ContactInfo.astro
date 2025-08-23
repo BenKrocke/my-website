@@ -1,0 +1,19 @@
+---
+export interface Props {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+}
+
+const { name, email, phone, location } = Astro.props;
+---
+
+<div class="header">
+  <div class="name">{name}</div>
+  <div class="contact-info">
+    <span>{email}</span>
+    <span>{phone}</span>
+    <span>{location}</span>
+  </div>
+</div>
